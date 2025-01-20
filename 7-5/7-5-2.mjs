@@ -9,8 +9,8 @@ const function752 = () => {
     function752SetTimeout(2000) 
       .then(() => { 
         console.log("★", new Date()) 
-        return function752SetTimeout(1000) 
       }) 
+    function752SetTimeout(3000) 
       .then(() => { 
         console.log("◆", new Date()) 
         return function752SetTimeout(2000)
