@@ -50,8 +50,21 @@ const put8_2_3 = (req, res) => {
     res.send(JSON.stringify({ status: "OK", code: "HC42-9823"}))
 }
 
+const delete8_2_4 = (req, res) => {
+    const data = {
+        "code": "HC42-9824",
+    }
+    if(req.query.code !== data.code){
+        res.send(JSON.stringify({ status: "error", code: req.query.code, cause: "not found code!"}))
+        return
+    }
+
+    res.send(JSON.stringify({ status: "OK", code: req.query.code}))
+}
+
 export const q8_2Controller = {
     get8_2_1,
     post8_2_2,
-    put8_2_3
+    put8_2_3,
+    delete8_2_4,
 }
