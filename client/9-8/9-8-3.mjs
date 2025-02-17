@@ -21,7 +21,7 @@ const createRecord = async (inputBody) => {
     const month = parseInt(inputFormElement.month.value)
     const day = parseInt(inputFormElement.day.value)
     const name = inputFormElement.name.value 
-    const score = parseInt(inputFormElement.score.value) 
+    const score = Number(inputFormElement.score.value) 
     if (!id) { 
       throw new Error("IDは必須です") 
     } 
@@ -78,6 +78,7 @@ const createRecord = async (inputBody) => {
           await createRecord(intutBody) 
           clearFormData() 
         } catch (err) { 
+            console.error(err)
           alert(err) 
         } 
       }, 
