@@ -9,7 +9,7 @@ const get8_2_1 = (req, res) => {
         return
     }
 
-    res.send(JSON.stringify({ code: req.query.code, data: "情報太郎"}))
+    res.send(JSON.stringify({ code: req.query.code, name: "情報太郎"}))
 }
 
 const post8_2_2 = (req, res) => {
