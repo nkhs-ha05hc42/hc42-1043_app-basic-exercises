@@ -58,7 +58,7 @@ const getRecord = async (targetId) => {
     const month = parseInt(inputFormElement.month.value)
     const day = parseInt(inputFormElement.day.value)
     const name = inputFormElement.name.value 
-    const score = parseInt(inputFormElement.score.value) 
+    const score = Number(inputFormElement.score.value) 
     if (!id) { 
       throw new Error("対象が読み込まれていません") 
     } 
